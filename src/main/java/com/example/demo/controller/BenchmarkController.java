@@ -17,9 +17,8 @@ public class BenchmarkController {
     @GetMapping("/run")
     public String runBenchmark(@RequestParam("iterations") int iterations) {
         Runnable task = () -> {
-            // Beispiel-Aufgabe (z.B. eine einfache Schleife)
             for (int i = 0; i < iterations; i++) {
-                fibonacci(20); // 20 ist ein Beispiel. Du kannst den Wert erhöhen, um die Berechnung zu erschweren.
+                fibonacci(20);
             }
         };
 
@@ -27,7 +26,6 @@ public class BenchmarkController {
         return "Benchmark completed in " + duration / 1_000_000 + " ms";
     }
 
-    // Hilfsmethode
     public int fibonacci(int n) {
         if (n <= 1) {
             return n;
