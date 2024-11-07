@@ -46,5 +46,6 @@
 				<version>3.1.4</version>
 			</plugin>
 		</plugins>
+		<finalName>benchmark</finalName>
 	</build>
 </project>
